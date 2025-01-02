@@ -18,7 +18,6 @@ use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\QualityResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\QualityResource\RelationManagers;
 use Filament\Resources\Concerns\Translatable;
 
 class QualityResource extends Resource
@@ -42,7 +41,7 @@ class QualityResource extends Resource
                     TextInput::make('title')
                         ->required()
                         ->maxLength(255)->label('title'),
-                    TextArea::make('description')->label('description')->required(),
+                    Forms\Components\Textarea::make('description')->label('description')->required(),
                     FileUpload::make('image')
                         ->label('Main Image'),
                 ]),
