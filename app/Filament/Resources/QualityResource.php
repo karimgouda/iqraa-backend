@@ -42,12 +42,9 @@ class QualityResource extends Resource
                     TextInput::make('title')
                         ->required()
                         ->maxLength(255)->label('title'),
-
-                    TextInput::make('description')->label('Duration')->required(),
-
+                    TextArea::make('description')->label('description')->required(),
                     FileUpload::make('image')
-                        ->label('Main Image')
-                        ->image(),
+                        ->label('Main Image'),
                 ]),
             ]);
     }
