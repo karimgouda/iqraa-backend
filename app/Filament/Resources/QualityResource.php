@@ -42,8 +42,8 @@ class QualityResource extends Resource
                         ->required()
                         ->maxLength(255)->label('title'),
                     Forms\Components\Textarea::make('description')->label('description')->required(),
-                    FileUpload::make('image')
-                        ->label('Main Image'),
+//                    FileUpload::make('image')
+//                        ->label('Main Image'),
                 ]),
             ]);
     }
@@ -55,7 +55,7 @@ class QualityResource extends Resource
                 TextColumn::make('id')->sortable()->searchable(),
                 TextColumn::make('title')->limit(50)->searchable()->label('type'),
                 TextColumn::make('description')->limit(50)->searchable()->label('Duration'),
-                ImageColumn::make('image'),
+//                ImageColumn::make('image'),
                 TextColumn::make('created_at')
                     ->dateTime(),
                 TextColumn::make('updated_at')

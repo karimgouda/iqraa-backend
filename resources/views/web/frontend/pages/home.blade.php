@@ -59,10 +59,10 @@
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container about px-lg-0">
             <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0" style="min-height: 400px">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 500px">
                     <div class="position-relative h-100">
-                        <video class="position-absolute w-100 h-100" style="object-fit: cover" autoplay muted loop>
-                            <source src="{{public_storage($about->image)}}" type="video/mp4" />
+                        <video class="position-absolute w-100 h-100" controls autoplay style="object-fit: cover">
+                            <source src="{{asset('frontend/video.mp4')}}"  type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
