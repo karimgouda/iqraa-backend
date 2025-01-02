@@ -10,7 +10,7 @@
         <div class="navbar-nav mx-auto py-4 py-lg-0">
             <a href="{{route('site.home')}}"  @class([request()->routeIs('site.home') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.Home')}}</a>
             <a href="{{route('site.about')}}" @class([request()->routeIs('site.about') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.About')}}</a>
-            <a href="{{route('site.services')}}" @class([request()->routeIs('site.services') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.Service')}}</a>
+            <a href="{{route('site.services')}}" @class([request()->routeIs('site.services') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.Services')}}</a>
             <a href="{{route('site.contact')}}" @class([request()->routeIs('site.contact') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.Contact')}}</a>
         </div>
 
