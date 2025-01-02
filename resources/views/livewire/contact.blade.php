@@ -37,9 +37,9 @@
                 </div>
                 <div class="col-12">
                     <div class="form-floating">
-                    <textarea class="form-control" wire:model="message" placeholder="Leave a message here" id="message"
+                    <textarea class="form-control" wire:model="message" placeholder="{{__('pages.Your Message')}}" id="message"
                               style="height: 100px"></textarea>
-                        <label for="message">{{__('pages.Message')}}</label>
+                        <label for="message">{{__('pages.Your Message')}}</label>
                     </div>
                     @error('message')
                     <span class="text-danger">{{$message}}</span>

@@ -24,4 +24,5 @@ return [
     'Phone'=>'Phone',
     'Message'=>'Message',
     'Sending'=>'Sending',
+    'Explore More'=>'Explore More'
 ];
