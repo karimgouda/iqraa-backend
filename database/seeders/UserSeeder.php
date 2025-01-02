@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'Super Admin',
             'email' => 'super_admin@app.com',
-            'password' => Hash::make('saay1234')
+            'password' => Hash::make('12345678')
         ]);
     }
 }
