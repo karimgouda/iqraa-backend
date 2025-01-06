@@ -8,21 +8,32 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto py-4 py-lg-0">
-            <a href="{{route('site.home')}}"  @class([request()->routeIs('site.home') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.Home')}}</a>
-            <a href="{{route('site.about')}}" @class([request()->routeIs('site.about') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.About')}}</a>
-            <a href="{{route('site.services')}}" @class([request()->routeIs('site.services') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.Services')}}</a>
-            <a href="{{route('site.contact')}}" @class([request()->routeIs('site.contact') ? 'nav-item nav-link active' : 'nav-item nav-link'])>{{__('site.shared.Contact')}}</a>
+            <a href="{{route('site.home')}}" @class([request()->routeIs('site.home') ? 'nav-item nav-link active' :
+                'nav-item nav-link'])>{{__('site.shared.Home')}}</a>
+            <a href="{{route('site.about')}}" @class([request()->routeIs('site.about') ? 'nav-item nav-link active' :
+                'nav-item nav-link'])>{{__('site.shared.About')}}</a>
+            <a href="{{route('site.services')}}" @class([request()->routeIs('site.services') ? 'nav-item nav-link
+                active' : 'nav-item nav-link'])>{{__('site.shared.Services')}}</a>
+            <a href="{{route('site.contact')}}" @class([request()->routeIs('site.contact') ? 'nav-item nav-link active'
+                : 'nav-item nav-link'])>{{__('site.shared.Contact')}}</a>
+            <a class="d-flex align-items-center justify-content-start mx-5"
+                href="{{ LaravelLocalization::getLocalizedURL(app()->getLocale() === 'en' ? 'ar' : 'en', null, [], true) }}">
+                <img width="24px" height="24px"
+                    src="{{ app()->getLocale() === 'en' ? asset('frontend/img/us.svg') : asset('frontend/img/eg.svg') }}"
+                    alt="lang">
+            </a>
         </div>
 
 
         <div class="h-100 d-lg-inline-flex align-items-center d-none mx-3">
-            <a class="btn btn-square rounded-circle bg-light text-primary me-2"
-               href="{{settings('facebook')}}"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="{{settings('twitter')}}"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="{{settings('facebook')}}"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="{{settings('twitter')}}"><i
+                    class="fab fa-twitter"></i></a>
             <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="{{settings('linkedin')}}"><i
                     class="fab fa-linkedin-in"></i></a>
-            <a class="btn btn-square rounded-circle bg-light text-primary me-0"
-               href="{{settings('instagram')}}"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="{{settings('instagram')}}"><i
+                    class="fab fa-instagram"></i></a>
         </div>
     </div>
 </nav>
