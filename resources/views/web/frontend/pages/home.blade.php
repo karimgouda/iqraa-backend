@@ -38,7 +38,6 @@
                 <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
                     <div class="h-100 bg-dark p-4 p-xl-5">
                         <div class="d-flex align-items-center justify-content-between mb-4">
-                            <!-- Add a class or inline style to make the image circular -->
                             <div class="btn-square rounded-circle"
                                  style="width: 64px; height: 64px; background: #000000; overflow: hidden;">
                                 <img class="img-fluid"
@@ -51,10 +50,11 @@
                         </div>
                         <h5 class="text-white">{{$service->title}}</h5>
                         <hr class="w-25" />
-                        <span>{{$service->description}}</span>
+                        <span style="line-height: 1.8;">{{$service->description}}</span>
                     </div>
                 </div>
             @endforeach
+
 
 
         </div>
