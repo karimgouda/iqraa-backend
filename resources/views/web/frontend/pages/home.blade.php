@@ -35,24 +35,22 @@
     <div class="container">
         <div class="row g-4">
             @foreach($services as $key=>$service)
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="h-100 bg-dark p-4 p-xl-5">
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="btn-square rounded-circle"
-                                 style="width: 64px; height: 64px; background: #000000; overflow: hidden;">
-                                <img class="img-fluid"
-                                     src="{{asset('frontend')}}/img/Logo.png"
-                                     alt="Icon"
-                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
-                            </div>
-
-                            <h1 class="display-1 mb-0" style="color: #000000">{{++$key}}</h1>
+            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="h-100 bg-dark p-4 p-xl-5">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="btn-square rounded-circle"
+                            style="width: 64px; height: 64px; background: #000000; overflow: hidden;">
+                            <img class="img-fluid" src="{{asset('frontend')}}/img/Logo.png" alt="Icon"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
                         </div>
-                        <h5 class="text-white">{{$service->title}}</h5>
-                        <hr class="w-25" />
-                        <span style="line-height: 1.8;">{{$service->description}}</span>
+
+                        <h1 class="display-1 mb-0" style="color: #000000">{{++$key}}</h1>
                     </div>
+                    <h5 class="text-white">{{$service->title}}</h5>
+                    <hr class="w-25" />
+                    <span style="line-height: 1.8;">{{$service->description}}</span>
                 </div>
+            </div>
             @endforeach
 
 
@@ -102,7 +100,8 @@
             @foreach($blogs as $key=>$blog)
             <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.{{++$key}}s">
                 <div class="service-item border h-100 p-5">
-                    <div class="btn-square bg-light rounded-2 mb-4" style="width: 100%; height: 200px">
+                    <div class="btn-square bg-light rounded-2 mb-4"
+                        style="width: 100%; height: 200px;object-fit: cover; overflow: hidden;">
                         <img class="img-fluid" src="{{public_storage($blog->image)}}" alt="Icon" />
                     </div>
                     <h4 class="mb-3">{{$blog->title}}</h4>
