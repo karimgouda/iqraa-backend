@@ -45,7 +45,7 @@
                     </div>
                     <h5 class="text-white">{{$service->title}}</h5>
                     <hr class="w-25" />
-                    <span>{{str()->limit($service->description)}}</span>
+                    <span>{{$service->description}}</span>
                 </div>
             </div>
             @endforeach
