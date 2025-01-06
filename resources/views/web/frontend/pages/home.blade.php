@@ -35,20 +35,27 @@
     <div class="container">
         <div class="row g-4">
             @foreach($services as $key=>$service)
-            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-                <div class="h-100 bg-dark p-4 p-xl-5">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <div class="btn-square rounded-circle" style="width: 64px; height: 64px; background: #000000">
-                            <img class="img-fluid" src="{{public_storage($service->image)}}" alt="Icon" />
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="h-100 bg-dark p-4 p-xl-5">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <!-- Add a class or inline style to make the image circular -->
+                            <div class="btn-square rounded-circle"
+                                 style="width: 64px; height: 64px; background: #000000; overflow: hidden;">
+                                <img class="img-fluid"
+                                     src="{{asset('frontend')}}/img/Logo.png"
+                                     alt="Icon"
+                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+                            </div>
+
+                            <h1 class="display-1 mb-0" style="color: #000000">{{++$key}}</h1>
                         </div>
-                        <h1 class="display-1 mb-0" style="color: #000000">{{++$key}}</h1>
+                        <h5 class="text-white">{{$service->title}}</h5>
+                        <hr class="w-25" />
+                        <span>{{$service->description}}</span>
                     </div>
-                    <h5 class="text-white">{{$service->title}}</h5>
-                    <hr class="w-25" />
-                    <span>{{$service->description}}</span>
                 </div>
-            </div>
             @endforeach
+
 
         </div>
     </div>
