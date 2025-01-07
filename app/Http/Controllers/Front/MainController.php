@@ -49,7 +49,7 @@ class MainController extends Controller
         $characteristics    = Characteristic::limit(3)->get();
         $services  = AboutSlider::limit(3)->get();
         $workers = Worker::limit(6)->get();
-        $testimonials = HomeCategory::limit(3)->get();
+        $testimonials = HomeCategory::get();
         $about = Quality::first();
         $blogs = Build::limit(3)->get();
         return view('web.frontend.pages.home', compact('features', 'characteristics','services','workers','testimonials','about','blogs'));
