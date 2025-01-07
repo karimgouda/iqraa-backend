@@ -35,7 +35,8 @@
             @foreach($blogs as $key=>$blog)
             <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.{{++$key}}s">
                 <div class="service-item border h-100 p-5">
-                    <div class="btn-square bg-light rounded-2 mb-4" style="width: 100%; height: 200px">
+                    <div class="btn-square bg-light rounded-2 mb-4"
+                        style="width: 100%; height: 200px;object-fit: cover; overflow: hidden;">
                         <img class="img-fluid" src="{{public_storage($blog->image)}}" alt="Icon" />
                     </div>
                     <h4 class="mb-3">{{$blog->title}}</h4>
