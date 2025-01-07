@@ -110,7 +110,7 @@
                         {{$blog->description}}
                     </p>
                     <a class="btn" href="{{route('site.services')}}"><i
-                            class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                            class="fa fa-arrow-right text-white me-3"></i>{{__('pages.Read More')}}</a>
                 </div>
             </div>
             @endforeach
